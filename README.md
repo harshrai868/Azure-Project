@@ -71,13 +71,10 @@ Synapse Analytics is used for performing data analysis, exploring data trends, i
 
 The analysis results are visualized using Power BI, creating interactive dashboards with charts and graphs for sharing insights and facilitating data-driven decision-making.
 
-Here are some visualizations created in Power BI
+## Here are some visualizations created in Power BI
 
-## Dashboard 1
-![Power BI Dashboard 1](path/to/your/power_bi_dashboard_1.png)
-## Dashboard 2
-## Dashboard 3
-## Dashboard 4
+![Power BI Dashboard 1](https://github.com/harshrai868/Azure-Project/blob/main/Dashboard.jpeg?raw=true)
+
 
 ## Conclusion
 
