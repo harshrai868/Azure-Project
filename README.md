@@ -18,6 +18,11 @@ This project implements a data pipeline using Azure Data Factory, Azure Data Lak
 We used a synthetic healthcare dataset with 10,000 records. It includes patient demographics, medical conditions, admission details, and more.
 
 ## Architecture Overview
+![Architectural Diagram]([paste-your-copied-image-url-here](https://github.com/harshrai868/Azure-Project/blob/main/AD.jpg))
+
+![Architectural Design] ()
+
+
 The architecture involves:
 - **Azure Data Factory (ADF):** Orchestrates data movement and transformations.
 - **Azure Data Lake Storage Gen2 (ADLS):** Stores raw and transformed data.
