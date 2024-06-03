@@ -1,53 +1,80 @@
-# Azure Data Pipeline Project
+# Healthcare Data Pipeline Project
 
-In this project, we are going to build a data pipeline using Azure services. The pipeline performs data ingestion, storage, transformation, analysis, and visualization.
+## Overview
 
-## Table of Contents
-1. Introduction
-2. Dataset Description
-3. Architecture Overview
-4. Data Pipeline Creation
-5. Transformation and Analytics
-6. Visualization and Power BI
-7. Conclusion
+In this project we implement a data pipeline using Azure services for analyzing a synthetic healthcare dataset. The pipeline involves data ingestion, storage in Azure Data Lake Storage Gen2 (ADLS), data cleaning using PySpark in Azure Data Factory (ADF), analytics in Synapse Analytics, and visualization in Power BI.
 
-## Introduction
-This project implements a data pipeline using Azure Data Factory, Azure Data Lake Storage Gen2, PySpark, Synapse Analytics, and Power BI.
+## Dataset
 
-## Dataset Description
-We used a synthetic healthcare dataset with 10,000 records. It includes patient demographics, medical conditions, admission details, and more.
+### Description
 
-## Architecture Overview
+The dataset contains synthetic patient healthcare records, including demographic information, medical conditions, admission details, billing amounts, medications, and test results. It's suitable for various data analysis and modeling tasks in the healthcare domain.
+
+### Schema
+
+The dataset schema includes the following columns:
+
+- Name
+- Age
+- Gender
+- Blood Type
+- Medical Condition
+- Date of Admission
+- Doctor
+- Hospital
+- Insurance Provider
+- Billing Amount
+- Room Number
+- Admission Type
+- Discharge Date
+- Medication
+- Test Results
+
+## Architectural Diagram
+
 ![Architectural Diagram](https://github.com/harshrai868/Azure-Project/blob/main/AD.jpg?raw=true)
 
-
-The architecture involves:
 - **Azure Data Factory (ADF):** Orchestrates data movement and transformations.
 - **Azure Data Lake Storage Gen2 (ADLS):** Stores raw and transformed data.
-- **Synapse Analytics:** Analyzes cleaned data.
-- **Power BI:** Creates interactive dashboards for visualization.
+- **Synapse Analytics:** Performs data analysis using SQL queries.
+- **Power BI:** Creates interactive dashboards for data visualization.
 
 ## Data Pipeline Creation
+
 ### Data Ingestion
-- Used ADF Copy Activity to ingest data from CSV files into ADLS Gen2.
+
+Data is ingested using Azure Data Factory (ADF) from the chosen source format (e.g., CSV). ADF supports various connectors for data sources, and the copy activity method is used for ingestion.
 
 ### Data Storage
-- Stored ingested data in ADLS Gen2 for scalability and flexibility.
 
-### Data Transformation
-- Used PySpark within ADF for data cleaning and transformation tasks.
+The ingested data is stored in Azure Data Lake Storage Gen2 (ADLS), providing scalability and flexibility for various data formats.
+
+### Data Transformation (PySpark)
+
+PySpark scripts are executed within Azure Data Factory (ADF) for data cleaning tasks, including handling missing values, correcting inconsistencies, and feature engineering.
 
 ## Transformation and Analytics
-### Data Cleaning with PySpark
-Handled missing values, corrected inconsistencies, and performed feature engineering.
 
-### Analysis with Synapse Analytics
-Transferred cleaned data from ADLS to Synapse and performed SQL queries for analysis.
+### PySpark for Cleaning
+
+PySpark code within ADF is utilized to clean the ingested data based on observations, ensuring data quality and accuracy.
+
+### Transfer to Synapse
+
+Cleaned data is transferred from ADLS to Synapse Analytics using ADF, enabling data analysis using SQL queries.
+
+### Synapse Analytics
+
+Synapse Analytics is used for performing data analysis, exploring data trends, identifying patterns, and uncovering insights.
 
 ## Visualization and Power BI
-Created visuals in Power BI, including bar charts, pie charts, and line charts. Published and shared the dashboard via Power BI service.
+
+The analysis results are visualized using Power BI, creating interactive dashboards with charts and graphs for sharing insights and facilitating data-driven decision-making.
 
 ## Conclusion
-Implementing this data pipeline improved data quality, facilitated data-driven insights, and enhanced operational efficiency.
 
-
+Implementing a data pipeline using Azure services offers several advantages for organizations:
+- Improved data quality through cleaning transformations.
+- Enhanced decision-making capabilities based on data-driven insights.
+- Cost savings by leveraging scalable and efficient Azure services.
+- Better understanding of healthcare operations and patient trends.
